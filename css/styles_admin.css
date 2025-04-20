@@ -137,13 +137,13 @@ h1 {
   
 
   .param-row label {
-      width: 70%;
-      max-width: 70%;
+      width: 80%;
+      max-width: 80%;
       text-align: left;
   }
   .param-row button {
-      width: 40%;
-      max-width: 40%;
+      width: 60%;
+      max-width: 60%;
       text-align: center;
   }
 
