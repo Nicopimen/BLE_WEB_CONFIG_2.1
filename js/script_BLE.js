@@ -473,6 +473,8 @@ async function readCharacteristic(caracteristica){
         })
         .catch(error => {
             console.error("Error reading to characteristic: ", error);
+            caracteristicaEstado.stopNotifications();
+            disconnectDevice();
             Swal.fire({ 
               title: "No se pudo Leer", 
              // html: `Debe completar los datos`,
