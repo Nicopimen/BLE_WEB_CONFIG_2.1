@@ -488,8 +488,12 @@ async function readCharacteristic(caracteristica){
         });
     } else {
         console.error ("Bluetooth is not connected. Cannot write to characteristic.")
-        window.alert("Bluetooth no conectado. \n Debe conectarse!")
-        Swal.fire({ 
+        //window.alert("Bluetooth no conectado. \n Debe conectarse!")
+        
+       caracteristicaEstado.stopNotifications();
+        disconnectDevice();
+      
+         Swal.fire({ 
           title: "No esta conectado", 
          // html: `Debe completar los datos`,
           icon: "error",
@@ -998,7 +1002,9 @@ async function disconnectDevice() {
     } else {
         // Throw an error if Bluetooth is not connected
         console.error("Bluetooth is not connected.");
-        window.alert("Bluetooth no conectado.")
+       // window.alert("Bluetooth no conectado.")
+        bleStateContainer.innerHTML = "Desconectado";
+        bleStateContainer.style.color = "#d13a30";
     }
 }
 
