@@ -377,7 +377,7 @@ function readCharacteristic2(caracteristica){
             return characteristic.readValue();
         })
         .then(value => {
-            console.log("Lellendo a", caracteristica);
+            console.log("Leyendo a ", caracteristica);
            
             if(caracteristica==ALTO_BAJO_CHARACTERISTIC_UUID) {
                 var abfC = new TextDecoder().decode(value);
@@ -678,7 +678,7 @@ function writeOnCharacteristic(value, caracteristica){
      
      lastDirParam=dir;
      
-     mostrarSpinner("Lellendo...");
+     mostrarSpinner("Leyendo...");
     
      await esperarHasta(() =>  isLecturaDispaly === 0);
      //detengo las notificaciones , para evitar concurrencias
