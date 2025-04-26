@@ -140,8 +140,8 @@ h1 {
   
   .param-row select,
   .param-row label {
-      width: 90%;
-      max-width: 90%;
+      width: 99%;
+      max-width: 99%;
       text-align: left;
   }
   .param-row button {
