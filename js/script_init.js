@@ -82,7 +82,7 @@ async function leerCSVDesdeArchivo(ruta) {
             }else{
               document.getElementById("error-msg").textContent = "Su clave a caducado, debe comunicarse con el Administrador.";
               Swal.fire({ 
-                title: "Su clave a caducado, debe comunicarse con el Administrador.", 
+                title: "Su clave ha caducado, debe comunicarse con el Administrador.", 
                // html: `Error`,
                 icon: "error",
                 background: "#2c2c2e",
