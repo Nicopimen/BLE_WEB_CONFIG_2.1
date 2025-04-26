@@ -109,6 +109,8 @@ h1 {
     align-items: flex-start;
     height: auto;
     padding: 1rem;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
   .usuario-box,
@@ -163,37 +165,40 @@ h1 {
     align-items: flex-start;
     height: auto;
     padding: 1rem;
-    width: 90%;
-    max-width: 90%;
+    width: 95%;
+    max-width: 95%;
     margin: 0 auto 10px auto;
    
   }
 
-  .led-labels{
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    margin: 0 auto 10px auto;
-    
-  }
+  .led-labels,
   .led-lights {
     display: flex;
-    align-items: flex-start;
+    flex-wrap: wrap; /* Permite que las etiquetas o leds bajen de línea si no entran */
     justify-content: center;
-    margin: 0 auto 10px auto;
-    
+    gap: 0.8rem; /* Un gap más pequeño en pantallas chicas */
+    margin: 0 auto;
+    width: 100%;
   }
+
   .led-labels span,
   .led-lights div {
+    width: 40px; /* Puedes ajustar este tamaño según te convenga */
+    margin: 5px;
     text-align: center;
-    align-items: flex-start;
-    margin: 0 auto 10px auto;
   }
 
   .led {
-    text-align: center;
-    align-items: flex-start;
-     margin: 0 auto 10px auto;
+    width: 30px; /* LED un poco más grande para pantallas táctiles */
+    height: 30px;
+    margin: 5px auto;
+  }
+
+  .content {
+    width: 90%;
+    max-width: 90%;
+    margin: 10px auto;
+    padding: 1rem;
   }
 
 }
@@ -275,11 +280,12 @@ h1 {
   max-width: 960px;
   box-shadow: 0 0 12px rgba(0,0,0,0.3);
 */
+  position: center;
   background-color: #2c2c2e;
   border-radius: 10px;
   padding: 2rem;
   max-width: 600px;
-  margin: 5px auto;
+  margin: 20px auto 20px auto;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
   justify-content: center;
   align-items: center;
